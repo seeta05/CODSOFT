@@ -1,15 +1,15 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class GradeCalculator {
-    public static void main(String[] args) {
+public class StudentGradeCalculator {
+    public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of subjects: ");
-        int numSubjects = scanner.nextInt();
+        int Subjects = scanner.nextInt();
 
-        int[] marks = new int[numSubjects];
+        int[] marks = new int[Subjects];
 
-        for (int i = 0; i < numSubjects; i++) {
+        for (int i = 0; i < Subjects; i++) {
             System.out.print("Enter marks for subject " + (i + 1) + " (out of 100): ");
             marks[i] = scanner.nextInt();
         }
@@ -19,7 +19,7 @@ public class GradeCalculator {
             totalMarks += mark;
         }
 
-        double averagePercentage = (double) totalMarks / numSubjects;
+        double averagePercentage = (double) totalMarks / Subjects;
 
         String grade;
         if (averagePercentage >= 90) {
