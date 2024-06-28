@@ -1,6 +1,4 @@
 import java.util.*;
-
-// Class to represent the user's bank account
 class BankAccount {
     private double balance;
 
@@ -83,18 +81,18 @@ class ATM {
                     withdraw();
                     break;
                 case 4:
-                    System.out.println("Goodbye!");
+                    System.out.println("Goodbye!!!");
                     break;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Invalid choice. Please try again!!!.");
             }
         } while (choice != 4);
     }
 }
 
-public class Main {
-    public static void main(String[] args) {
-        BankAccount account = new BankAccount(1000.0); // initial balance of $1000
+public class AtmInterface {
+    public static void main(String args[]) {
+        BankAccount account = new BankAccount(1000.0);
         ATM atm = new ATM(account);
         atm.run();
     }
